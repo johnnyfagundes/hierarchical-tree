@@ -1,0 +1,17 @@
+<!--<div>{{node.name}}</div>-->
+<!--<ul>-->
+<!--  <li *ngFor="let node of node.children">-->
+<!--    <tree-node  [node]="node"></tree-node>-->
+<!--  </li>-->
+<!--</ul>-->
+<div class="my-item">
+
+  <div class="main no-border" *ngFor="let node of nodes">
+    <div class="item">
+      <custom-card [data]='{ name: node.name }'></custom-card>
+    </div>
+
+    <tree-node [nodes]="node.children"></tree-node>
+
+  </div>
+</div>
